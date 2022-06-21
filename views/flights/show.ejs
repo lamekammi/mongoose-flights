@@ -23,6 +23,21 @@
         <div>Depart:</div>
         <div><%= flight.departs %></div>
     </section>
-    
+
+    <br><br>
+    <h2>Add Desitination</h2>
+    <form id="add-destination-form" method="POST"
+        action="/flights/<%= flight._id %>/destinations">
+    <label>Arrival:</label>
+    <label>Airport:</label>
+    <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+    </select>
+    <input type="submit" value="Add Destination">
+    </form>
 </body>
 </html>
