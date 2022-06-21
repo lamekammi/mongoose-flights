@@ -3,7 +3,8 @@ const Flight = require('../models/flight');
 module.exports = {
     new: newFlight,
     create,
-    index
+    index,
+    show
 }
 
 function newFlight(req, res) {
@@ -24,6 +25,14 @@ function index(req, res) {
     Flight.find({}, function(err, flights) {
         res.render('flights/index', {
             flights
+        })
+    })
+}
+
+function show(req, res) {
+    Flight.findById(req.params.id, function(err, flight) {
+        res.render('flights/show', {
+            flight
         })
     })
 }
