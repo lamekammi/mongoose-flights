@@ -9,7 +9,7 @@ const destinationSchema = new Schema({
     },
 
     arrival: {
-        type: Date
+        type: String
     }
 })
 
