@@ -33,12 +33,12 @@ const flightSchema = new Schema({
 
     departs: {
         type: Date,
-        defualt: function() {
-            return new Date()
-        }
+        //default: new Date()
     },
 
     destinations: [destinationSchema]
+}, {
+    timestamps: true
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
