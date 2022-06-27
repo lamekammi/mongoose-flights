@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose-Flights</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav><a href="/">Home Page</a> || <a href="/flights">All Flights</a></nav>
+    <h1>New Ticket</h1>
+    <form id="add-seat-form" action="/tickets/flights/<%= flight %>" method="POST">
+        <label>Seat:</label>
+        <input type="text" name="seat">
+        <label>Price:</label>
+        <input type="text" name="price">
+        <input type="submit" value="Add Ticket">
+    </form>
+
+</body>
+</html>

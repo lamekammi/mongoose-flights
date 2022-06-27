@@ -33,7 +33,9 @@ const flightSchema = new Schema({
 
     departs: {
         type: Date,
-        //default: new Date()
+        default: function(){
+       return new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().slice(0, -1)
+        }
     },
 
     destinations: [destinationSchema]

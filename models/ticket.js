@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const ObjectId = require('mongodb').ObjectId;
 
 const ticketSchema = new Schema({
     seat: {
@@ -14,7 +13,9 @@ const ticketSchema = new Schema({
     },
 
     flight: {
-        type: ObjectId,
+        type: Schema.Types.ObjectId,
          ref: 'Flight'
     }
 })
+
+module.exports = mongoose.model('Ticket', ticketSchema);

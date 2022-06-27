@@ -18,7 +18,7 @@
         <div><%= flight.airport %></div>
         <br>
         <div>Flight No:</div>
-        <div><%= flight. flightNo %></div>
+        <div><%= flight.flightNo %></div>
         <br>
         <div>Depart:</div>
         <div><%= flight.departs %></div>
@@ -62,6 +62,15 @@
         <h5>No Destinations Yet</h5>
     <% } %>
     <h2>Tickets:</h2>
+    <% tickets.forEach(function(t) { %>
+        <tr> 
+            <td>Seat: <%= t.seat %></td>
+            <td>Price: <%= t.price %></td>
+        </tr>
+        <br>
+        <br>
+    <% }) %>
+    <a href="/tickets/flights/<%= flight._id %>/new">New Ticket</a>
 
 </body>
 </html>
